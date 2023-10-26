@@ -12,14 +12,11 @@ html {
 
 
 body, header, main, footer {
-    border: 2px red solid;
+   /* border: 2px red solid;*/
     min-height: 50px;
     margin: 0.5rem;
     min-width: 400px;
     }
-
-
-
 
 
 header{
@@ -29,8 +26,6 @@ header{
     /*padding: 10px;*/
     /*position: fixed;*/
     }
-
-
 
 
 
@@ -64,10 +59,8 @@ main {
 }*/
 
 
-
-
 main>div {
-    border: 2px blue solid;
+   /* border: 2px red solid;*/
     min-height: 180px;
     margin: 0.5rem;
     height: auto;
@@ -76,46 +69,75 @@ main>div {
 
 
 .secciones{
-    border: 2px green solid;
+   /* border: 2px green solid;*/
     min-height: 50px;
     margin: 0.5rem;
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
 
 }
 
 .ejercicios{
-    border: 2px green solid;
+    /*border: 2px green solid;*/
     min-height: 300px;
     margin: 0.5rem;
     min-width: 400px;
     height: auto;
     
+    
 }
 
 .secciones article{
-    border: 2px purple solid;
+    border: 1px blue solid;
     margin-bottom: auto;
     margin-right: auto;
     min-height: 20px;
     display: inline-block;
     height: 380px;
-    width: 414px;
+    width: 33%;
     overflow-x: hidden;
     padding-right: 0%;
     padding-top: 0%;
     padding-left: 0%;
     padding-right: 0%;
-    
+    animation-name: chance-color;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    min-width: 400px;
     
 }
 
+/*@keyframes chance-color {
+
+    from {background-color:  rgba(6, 6, 8, 0.253);
+    }
+    to {background-color:  rgb(70, 69, 70);;
+    }
+}*/
+
+
+@keyframes chance-color {
+
+    0% {background-color: gray;
+    }
+
+    50% {background-color: whitesmoke;
+    }
+
+    100% {background-color:  red;
+    }
+}
 
 .fotosarg {
-    border: 2px purple solid;
+    /*border: 2px purple solid;*/
     margin: 0.5 rem;
     min-height: 20px;
     display: inline-block;
     height: 380px;
-    width: 427px;
+    width: 33%;
+    min-width: 426px;
     
     
     
@@ -133,6 +155,17 @@ footer>div {
 
 }
 
+.redes{
+    color: white;
+    margin: 0px 6px;
+    font-size: 2vw;
+    text-align: center;
+
+}
+.redes:hover{
+    color: #0909fdfa;
+}
+
 p{
     text-align: center;
 
@@ -143,37 +176,29 @@ body{
 }
 
 
-
-
 /*--------------------formulario------------*/
 
 .form-register {
-    /*width: 600px;*/
+    width: 600px;
     background-color: #636372b0;
-    /*padding: 30px;*/
+    padding: 30px;
     margin: auto;
     margin-top: 50px;
-    margin-bottom: 50px;
-    margin-right: 20px;
-    margin-left: 20px;
     border-radius: 4px;
     font-family: Calibri;
     color: white;   
     box-shadow: 7px 13px 37px #000; 
-    display: inline-block;
-    border: 2px purple solid;
-    min-width: 400px;
+
 }
 
 .form-register .controls {
-    /*width: 40%;*/
+    width: 40%;
     background-color: white;
     padding: 2px;
     border-radius: 4px;
     margin-bottom: 1px;
     border: 2px solid #0909fdfa;
-    display: inline-block;
-    min-width: 400px;
+    
 }
 
 .form-register .text1 {
@@ -181,97 +206,118 @@ body{
     text-align: justify;
     font-size: 14px;
     font-family: Calibri;
-    display: inline-block;
-    min-width: 400px;
+    
 }
 
 .form-register a {
     color: #0909fdfa;
     text-decoration: none;
     font-weight: bold;
-    display: inline-block;
-    min-width: 400px;
+}
+
+.form-register .formu {
+    margin: auto;
+    font-family: Calibri;
+    color: white;   
 }
 
 .form-register .botons {
-    /*width: 30%;*/
-    background: #0909fdfa;
+    width: 30%;
+    background: linear-gradient(
+        90deg,
+        hwb(0 2% 7% / 0.98) 0%,
+        rgb(5, 0, 0) 77%);
+    box-shadow: 0 0 20px hwb(0 0% 97% / 0.98);
     border-radius: 15px;
     padding: 10px;
     color: white;
     font-weight: bold;
     margin: 10px 0;
     font-size: 13px;
-    display: inline-block;
-    min-width: 400px;
+
 }
 
 .form-register .botons:hover {
-    background-color: #0909fdb4;
+    background: linear-gradient(
+        90deg,
+        rgb(5, 0, 0) 0%,
+        hwb(0 2% 7% / 0.98) 77%);
     color: black;
-    display: inline-block;
-    min-width: 400px;
+
     
 }
 
 .form-register .botons1 {
-    /*width: 30%;*/
-    background: rgb(252, 4, 4);
+    width: 30%;
+    background: linear-gradient(
+        90deg,
+        hwb(0 2% 7% / 0.98) 0%,
+        rgb(5, 0, 0) 77%);
+    box-shadow: 0 0 20px hwb(0 0% 97% / 0.98);
     border-radius: 15px;
     padding: 10px;
     color: white;
     font-weight: bold;
     margin: 10px 0;
     font-size: 13px;
-    display: inline-block;
-    min-width: 400px;
    
 }
 
 .form-register .botons1:hover {
-    background-color: rgba(252, 4, 4, 0.671);
+    background: linear-gradient(
+        90deg,
+        rgb(5, 0, 0) 0%,
+        hwb(0 2% 7% / 0.98) 77%);
     color: black;
-    display: inline-block;
-    min-width: 400px;
+    
 }
 
 .form-register .comen {
     width: 100%;
-    display: inline-block;
-    min-width: 400px;
 
 }
 
-
-form {
-    display: inline-block;
-    min-width: 400px;
-
-}
-
-label {
-    display: inline-block;
-    min-width: 400px;
+.warnings {
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color:  white;
+    padding-top: 20px;
+    font-family: Calibri;
 
 }
 
-fieldset {
-    display: inline-block;
-    min-width: 400px;
+@media(max-width:991px) {
+    body {
+        padding: 30px;
+    }
+
+    .form-register {
+        padding: 50px 30px;
+        width: 100%;
+    }
+
+    input {
+        padding: 15px 10px;
+    }
+
 
 }
 
-legend {
-    display: inline-block;
-    min-width: 400px;
-}
-
-select {
-    display: inline-block;
-    min-width: 400px;
-} 
-
-
-
-
+nav {
+    animation-duration: 1.5s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
 

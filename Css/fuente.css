@@ -11,12 +11,13 @@ h1{
     font-family: 'Oswald';
     padding:10px;
     border-bottom: 3px solid rgb(248, 24, 24);
-    text-align:center;
+    text-align:left;
 }
 nav{
     color:black;
     font-family: 'Oswald';
     font-size: 17px;
+    text-align: right;
    
     
 }
@@ -32,6 +33,7 @@ h3{
     font-family: 'Open Sans';
     font-weight: bolder;
     font-size: 20px;
+    text-align: center;
 
 }
 p{
@@ -50,7 +52,7 @@ li{
 h4
 {
     color:white;
-    font-family: 'caveat';´
+    font-family: 'caveat';
     font-size: 18px;
 
 }

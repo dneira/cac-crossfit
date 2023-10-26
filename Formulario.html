@@ -6,6 +6,8 @@
     <script src="https://kit.fontawesome.com/65b8680a6e.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="Imagenes/Logo1.png" type="image/x-icon">
     <link rel="stylesheet" href="Css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Sofia+Sans:wght@400;500&family=Poppins:ital,wght@0,400;0,500;1,300&family=Caveat:wght@400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Css/fuente.css">
     <title>Formulario</title>
 </head>
 <body>
@@ -23,36 +25,36 @@
                 <a class="nave" href="Queescrossfit.html">¿Que es el Crossfit?</a>
                 <a class="nave" href="Entrenamientos.html">Entrenamientos</a>
                 <a class="nave" href="Preguntas.html">Preguntas Frecuentes</a>
+                <a class="nave" href="calculadora.html">Calcula tu peso ideal</a>
                 <a class="nave" href="Formulario.html">Registro de Atletas</a>
                 
     
             </nav> 
+            </div>
     </header>
-
     <div>
 
 <section class="form-register">
-    <form action="https://formsubmit.co/josedh4@gmail.com" method="post">
-        
+    <form action="https://formsubmit.co/josedh4@gmail.com" method="post" id="form">
         <h2 >Formulario de Registro</h2>
         <fieldset>
             <legend>
                 Datos Personales:
             </legend>
         <br>
-        <label for="nom">Nombre(s):</label>
-        <input class="controls" type="text" name="Nombre" id="nom" placeholder="Ingrese su nombre aqui..." required>
+        <label for="nombre">Nombre(s):</label>
+        <input class="controls" type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre aqui...">
 
         <br><br>
-        <label for="ape">Apellido(s):</label>
-        <input class="controls" type="text" name="Apellido" id="ape" placeholder="Ingrese su apellido aqui..." required>
+        <label for="apellido">Apellido(s):</label>
+        <input class="controls" type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido aqui...">
 
         <br><br>
         <label for="nac">Fecha Nac. (dd/mm/aaaa):</label>
         <input class="controls" type="date" name="Fecha de Nacimiento" id="nac">
         <br><br>
 
-        <p>Genero:
+        <p for="genero" class="formu">Genero:
             <input type="radio" name="Genero" value="Hombre" checked>Hombre
             <input type="radio" name="Genero" value="Mujer">Mujer
             <input type="radio" name="Genero" value="Binario">Binario
@@ -60,7 +62,7 @@
 
         <br><br>
         <label for="dni">DNI:</label>
-        <input class="controls" type="number" name="DNI" id="dni" minlength="1000000" maxlength="150000000" placeholder="Ingrese numero DNI aqui..." required>
+        <input class="controls" type="number" name="DNI" id="dni" minlength="1000000" maxlength="150000000" placeholder="Ingrese numero DNI aqui...">
 
         <br><br>
         <label for="pnac">Pais de Nacimiento:</label>
@@ -576,7 +578,7 @@
         </select>
 
         <br><br>
-        <label for="compe">Desea competir:</label>
+        <label for="compe">Desea competir?:</label>
         <select class="controls" name="Compite" id="compe">
             <option value="ninguna">Seleccione</option>
             <option value="Si">Si</option>
@@ -604,27 +606,29 @@
          <label for="Comentarios">Comentarios:</label>
          <textarea class="comen" name="Comentarios" cols="60" rows="8" maxlength="150" placeholder="Max.150 caracter..."></textarea>
 
-         <p class="text1">Si usted hace click en el boton <a href="#"> "Enviar" </a> estaria validando la informacion ingresada y quedara en los registro de atletas.</p>
+         <p class="text1">Si usted hace click en el boton <a href="#"> "Enviar"</a> estaria validando la informacion ingresada y quedara en los registro de atletas.</p>
+
+         <p class="warnings" id="warnings"></p><br>
          
         <input class="botons" type="submit" value="Enviar">
         <input class="botons1" type="reset" value="Borrar">
+        <script src="Js/Formulario.js"></script>
+        
     </form>
-
- 
 </section>
-
     </div>
+    <br><br>
     
     <footer>
         <div>
-            <h4 style="text-align: center;">"El crossfit no es un deporte, es un estilo de vida"</h4>
-            <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
-            <a href="https://es-la.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
-            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
-            <br>
-            <P style="color: white;"> Programadores 2023 Derechos Reservados </P>
-            </div>
+            <h4 class="estilodevida" style="text-align: center; font-size: 150%;">"El crossfit no es un deporte, es un estilo de vida"</h4>
+            <a class="redes" href="https://twitter.com/" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
+            <a class="redes" href="https://es-la.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a class="redes" href="https://www.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
+            <a class="redes" href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+       <br>
+       <P style="color: white; text-align: center; font-size: 75%;"> Programadores 2023 Derechos Reservados </P>
+       </div>
     </footer>
 </body>
 </html>

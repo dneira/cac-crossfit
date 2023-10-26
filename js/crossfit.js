@@ -1,5 +1,5 @@
-async function calcular() {
-    const url = 'https://fitness-calculator.p.rapidapi.com/idealweight?gender=male&height=180';
+async function calcular(genero, altura) {
+    const url = 'https://fitness-calculator.p.rapidapi.com/idealweight?gender='+genero+'&height='+altura;
     const options = {
         method: 'GET',
         headers: {
@@ -10,11 +10,24 @@ async function calcular() {
 
     try {
         const response = await fetch(url, options);
-        const result = await response.text();
-        console.log(result);
+        const result = await response.json();
+        document.getElementById('resultadoPeso').style.display = 'block';
+        let metodos = result.data;
+        //console.log(metodos);
+        Object.entries(metodos).forEach(([key, value]) => {
+            document.getElementById('metodos').innerHTML += "<li>"+ key +" : " + value +" Kg</li>";
+        });
     } catch (error) {
         console.error(error);
     }
 }
 
-calcular()
+function calcularPeso() {
+    let genero = document.getElementById('genero');
+    let generoValue = genero.value;
+    console.log(generoValue);
+    let altura = document.getElementById('altura').value;
+    console.log(altura);
+    let resultado = calcular(generoValue, altura);
+    //console.log(resultado);
+}
